@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block headers %}
+    <div class="container underline">
+        <div class="col-lg-6">
+            <p class="headers">Hot Questions</p>
+        </div>
+        <div class="col-lg-6">
+            <p><a href="{% url "index" %}" class="link headers">New Questions</a></p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block left_main_content %}
+
+    <div>
+        {% include "question-listing.html" %}
+
+    </div>
+{% endblock %}
+
+{% block right-main-content %}
+    {% include "right-content.html" %}
+{% endblock %}
+
+{% block bottom %}
+{% endblock %}

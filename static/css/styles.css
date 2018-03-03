@@ -1,0 +1,203 @@
+body{
+    background-color: #ebebeb;
+    /*background-color: #e5efff;*/
+}
+
+.main-row {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /*height: 1200px;*/
+}
+
+.headers-row {
+    /*height: 100px;*/
+    margin-top: 100px;
+}
+
+.bottom-row {
+    /*height: 100px;*/
+    margin-top: 20px;
+}
+
+.not-registered {
+    display: none !important;
+}
+
+.avatar {
+    margin-top: 12px;
+    width: 30px;
+    height: 30px;
+}
+
+.user-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: Laksaman;
+}
+
+
+.page-numbers {
+    margin-left: 50px;
+}
+
+
+.ask {
+    margin-left: 50px;
+}
+
+.ask-name {
+    margin-bottom: 20px;
+    width: 85%;
+
+}
+
+.ask-theme {
+    margin-bottom: 20px;
+    width: 85%;
+
+}
+
+.ask-area {
+    margin-bottom: 20px;
+    width: 85%;
+    height: 70px;
+}
+
+
+.question{
+    width: 700px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-width: 1px;
+    background-color: white;
+}
+
+.answer{
+    /*width: 700px;*/
+    /*height: 150px;*/
+    margin-top: 15px;
+    margin-bottom: 75px;
+
+}
+
+
+.question-image {
+
+    width: 90%;
+    height: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headers {
+    margin-left: 50px;
+    /*margin-top: 100px;*/
+    font-size: 50px;
+    font-family: Laksaman;
+}
+
+.question-name {
+    margin-left: 10px;
+    font-size: 40px;
+    font-family: Laksaman;
+}
+
+.question-bottom {
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: Laksaman;
+}
+
+.question-text {
+    font-size: 30px;
+    max-width: 500px;
+    font-style: italic;
+}
+
+.question-annotation {
+    max-width: 200px;
+    font-style: italic;
+}
+
+.likes {
+    margin-top: 20px;
+}
+
+.header-link {
+    margin-top: 35px;
+    font-size: 35px;
+}
+
+.no-data {
+    font-size: 30px;
+    font-style: normal;
+}
+
+.link {
+    /*font-size: 20px;*/
+    color: #487284;
+    font-family: Laksaman;
+ }
+
+.line {
+    height: 115px;
+    border-bottom: solid black thin;
+
+}
+
+.sign-form {
+    /*margin-bottom: 20px;*/
+    width: 70%;
+
+}
+
+.error {
+    display: none !important;
+}
+
+.underline {
+    border-bottom: solid black thin;
+    margin-bottom: 20px;
+    /*border: solid black;*/
+}
+
+.settings_avatar {
+    width: 20%;
+    height: 20%;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    font-family: Laksaman;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: lightsteelblue;
+}
+
+.tags {
+    /*height: 100px;*/
+
+}
+
+
+.bottom-answer {
+    margin-bottom: 50px;
+    /*height: 100px;*/
+}
+
+.members {
+
+    margin-top: 20px;
+    /*height: 100px;*/
+
+}
+
+h1 {
+    font-family: Laksaman;
+}

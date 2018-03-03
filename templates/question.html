@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block headers %}
+    <div class="container underline" xmlns="http://www.w3.org/1999/html">
+        <div class="col-lg-6">
+            <p class="headers">{{ question.title }}</p>
+            <p>Author: <a class="link">{{ question.user }}</a> Tags:
+                {% for tag in question.tags.all %}
+                            <a href="{% url "tag" tag.name %}" class="link"><span class="badge">{{ tag.name }}</span></a>
+                {% endfor %}
+            </p>
+            <div>
+                <p class="question-text">{{ question.text }}</p>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <a class="link headers" href="{% url "hot" %}">Hot Questions</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block left_main_content %}
+
+    {% if question.answer_count == 0 %}
+        <p class="no-data">No answers. Be the first!</p>
+    {% else %}
+
+        {% for answer in question.answers.all %}
+            <div class="container question" id="{{ answer.id }}">
+                <div class="col-lg-3">
+                    <div >
+                        <img class="question-image" src="../static/images/question.svg">
+                    </div>
+
+                </div>
+                <div class="col-lg-9">
+
+                    <a class="link question-name">{{ answer.user }}</a>
+                    <div>
+                        <p>{{ answer.text }}</p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}
+
+{% block right-main-content %}
+    {% include "right-content.html" %}
+{% endblock %}
+
+
+
+
+{% block bottom %}
+
+    <form action="{% url "make_answer" question.id %}" method="post">
+    {% csrf_token %}
+        <div class="row bottom-answer">
+            <textarea name="answer_text" cols="40" rows="5" class="form-control ask-area" placeholder="Write here..."></textarea>
+            <button type="submit" class="btn btn-default">Answer</button>
+        </div>
+    </form>
+
+{% endblock %}

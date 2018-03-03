@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block headers %}
+    <p class="headers" xmlns="http://www.w3.org/1999/html">Ask your question</p>
+
+{% endblock %}
+
+{% block left_main_content %}
+
+    <div>
+        <form class="ask" action="{% url "save_question" %}" method="post">
+
+            {% csrf_token %}
+
+            <p>Title:</p><input name="question_name" type="text"  class="form-control ask-name" placeholder="Name of question"/>
+
+            <p>Tags:</p><input name="question_tags" type="text"  class="form-control ask-name" placeholder="Hashtags"/>
+
+            <p>Your question:</p><textarea cols="40" rows="5" name="question_text" class="form-control ask-area"
+                                           placeholder="Write here..."></textarea>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block right-main-content %}
+    {% include "right-content.html" %}
+{% endblock %}

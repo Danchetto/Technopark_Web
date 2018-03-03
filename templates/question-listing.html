@@ -1,0 +1,47 @@
+{% for question in questions %}
+            <div class="container question" id='{{ question.id }}'>
+                <div class="col-lg-3">
+                    <div >
+                        <img class="question-image" src="../static/images/question.svg">
+                    </div>
+                    <div class="likes">
+                        <p> {{ question.likes }} <a href="{% url "like" question.id %}">
+                            <button><span class="glyphicon glyphicon-thumbs-up"></span></button></a>
+                            {{ question.dislikes }} <a href="{% url "dislike" question.id %}">
+                                <button><span class="glyphicon glyphicon-thumbs-down"></span></button></a></p>
+                    </div>
+
+                </div>
+                <div class="col-lg-9">
+
+                    <a href="{% url "question" question.id %}" class="question-name">{{ question.title }}</a>
+                    <div>
+                        <p class="question-annotation">{{ question.text }}</p>
+                    </div>
+
+                    <div class="question-bottom">
+
+                        <span>{{ question.answer_count }} answers</span>
+                        {% for tag in question.tags.all %}
+                            <a href="{% url "tag" tag.name %}" class="link"><span class="badge">{{ tag.name }}</span></a>
+
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+
+
+{% endfor %}
+
+<nav aria-label="Page navigation">
+    <ul class="pagination" style="margin-left: 30px">
+        {% if questions.has_previous %}
+            <li><a href="?page={{ questions.previous_page_number }}">Previous</a></li>
+        {% endif %}
+        {% if questions.has_next %}
+            <li><a href="?page={{ questions.next_page_number }}">Next</a></li>
+        {% endif %}
+    </ul>
+</nav>

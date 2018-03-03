@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<p>Get data</p>
+<form action="{% url 'test' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name = "test"/>
+    <input type="submit" value="Send"/>
+    <p>{{ get_data }} {{ post_data }}</p>
+</form>
+
+</body>
+</html>

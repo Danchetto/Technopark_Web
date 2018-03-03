@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block headers %}
+    <div class="container underline">
+    <p class="headers">{{ user.username }}</p>
+    </div>
+
+{#    <div class="line"></div>#}
+
+{% endblock %}
+
+
+
+
+{% block left_main_content %}
+
+    <div>
+
+        <form role="form">
+
+            <div class="form-group">
+                <label class="control-label" for="inputSuccess">Login:</label>
+                <input type="text" class="form-control sign-form" id="login_success" value={{ user.username }}>
+                {#                <span class="help-block">Woohoo!</span>#}
+            </div>
+            <div class="form-group has-error error">
+                <label class="control-label" for="inputError">Login:</label>
+                <input type="text" class="form-control sign-form" id="login_error" placeholder="Login">
+                <span class="help-block">Please correct the error</span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="inputSuccess">E-mail:</label>
+                <input type="text" class="form-control sign-form" id="email_success" value={{ user.email }}>
+                {#                <span class="help-block">Woohoo!</span>#}
+            </div>
+            <div class="form-group has-error error">
+                <label class="control-label" for="inputError">E-mail:</label>
+                <input type="text" class="form-control sign-form" id="email_error" placeholder="E-mail">
+                <span class="help-block">Please correct the error</span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="inputSuccess">Nickname:</label>
+                <input type="text" class="form-control sign-form" id="nickname_success" value={{ user.username }}>
+                {#                <span class="help-block">Woohoo!</span>#}
+            </div>
+            <div class="form-group has-error error">
+                <label class="control-label" for="inputError">Nickname:</label>
+                <input type="text" class="form-control sign-form" id="nickname_error" placeholder="Nickname">
+                <span class="help-block">Please correct the error</span>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label" for="inputSuccess">Avatar:</label>
+
+                <input id="input-b1" name="input-b1" type="file" class="file">
+                {#                <span class="help-block">Woohoo!</span>#}
+            </div>
+
+            <div class="container">
+
+            <img class="settings_avatar" src="../static/images/avatar.png">
+            </div>
+
+            <button type="submit" class="btn btn-default">Save</button>
+
+        </form>
+
+    </div>
+
+{% endblock %}
+
+
+
+{% block right-main-content %}
+    {% include "right-content.html" %}
+{% endblock %}
+
+{% block bottom %}
+{% endblock %}
